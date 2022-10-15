@@ -1,0 +1,10 @@
+app:
+  build:
+    base: [nodejs@16]
+    build:
+      - npm install
+      - npm run build
+    deploy: [./]
+    cache: [node_modules]
+  run:
+    start: node build
